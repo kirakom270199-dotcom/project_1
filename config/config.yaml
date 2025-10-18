@@ -1,0 +1,29 @@
+data:
+  url: "https://code.s3.yandex.net/deep-learning/tweets.txt"
+  train_size: 0.8
+  val_size: 0.1
+  test_size: 0.1
+  random_state: 42
+  max_length: 128
+
+model:
+  embedding_dim: 64
+  hidden_dim: 64
+  vocab_size: 50257
+  pad_token_id: 0
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 1
+  max_grad_norm: 1.0
+  patience: 3
+
+evaluation:
+  max_examples: 200
+  print_examples: 3
+  max_new_tokens: 50
+
+transformer:
+  model_name: "distilgpt2"
+  temperature: 0.7
